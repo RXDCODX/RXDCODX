@@ -21,6 +21,7 @@ jobs:
           token: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
           user: RXDCODX
           template: classic
+          config_presets: "@lunar-red"
           base: header, activity, community, repositories, metadata
           config_display: large
           config_animations: yes
@@ -32,17 +33,6 @@ jobs:
           plugin_activity_limit: 5
           plugin_stars: yes
           plugin_stars_limit: 5
-
-      - name: Recolor SVG to red theme
-        run: |
-          sed -i \
-            -e 's/#4078c0/#FF3333/g' \
-            -e 's/#0366d6/#FF3333/g' \
-            -e 's/#1f6feb/#FF3333/g' \
-            -e 's/#388bfd/#FF3333/g' \
-            -e 's/#2ea043/#FF3333/g' \
-            -e 's/#586069/#8B949E/g' \
-            metrics.classic.svg
 
       - name: Prepare dist
         run: |
