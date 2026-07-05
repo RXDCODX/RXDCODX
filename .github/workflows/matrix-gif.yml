@@ -1,0 +1,61 @@
+name: Generate Matrix GIF
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Puppeteer
+        run: |
+          npm init -y
+          npm install puppeteer
+
+      - name: Install ffmpeg and gifsicle
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg gifsicle
+
+      - name: Capture Matrix frames
+        run: node .github/scripts/capture-matrix.js
+
+      - name: Assemble and optimize GIF
+        run: |
+          ffmpeg -y -framerate 8 -i .github/frames/frame-%04d.png \
+            -vf "split[s0][s1];[s0]palettegen=max_colors=64:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=3" \
+            -loop 0 dist/matrix-rain.gif
+
+          gifsicle -O3 --lossy=80 -b dist/matrix-rain.gif
+
+          echo "GIF size:"
+          ls -lh dist/matrix-rain.gif
+
+      - name: Copy existing output branch content
+        run: |
+          git fetch origin output || true
+          if git show-ref --verify --quiet refs/remotes/origin/output; then
+            git worktree add wt-output origin/output
+            cp wt-output/*.svg dist/ 2>/dev/null || true
+            rm -rf wt-output
+          fi
+
+      - name: Deploy to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
