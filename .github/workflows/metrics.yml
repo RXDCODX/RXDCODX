@@ -34,16 +34,7 @@ jobs:
           plugin_activity_limit: 5
           plugin_stars: yes
           plugin_stars_limit: 5
-          palette: >
-            {
-              "background": "#0D1117",
-              "title": { "text": "#FF3333", "background": "#161B22" },
-              "icon": "#FF3333",
-              "text": "#C9D1D9",
-              "subtext": "#8B949E",
-              "border": "#30363D"
-            }
-          output: dist/metrics.classic.svg
+          config_output: dist/metrics.classic.svg
 
       - name: Copy existing output branch content
         run: |
