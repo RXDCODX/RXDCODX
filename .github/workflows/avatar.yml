@@ -1,0 +1,43 @@
+name: Generate Avatar SVG
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Embed avatar into SVG
+        run: node .github/scripts/embed-avatar.js
+
+      - name: Copy existing output branch content
+        run: |
+          mkdir -p dist
+          git fetch origin output || true
+          if git show-ref --verify --quiet refs/remotes/origin/output; then
+            git worktree add wt-output origin/output
+            cp wt-output/*.svg wt-output/*.gif dist/ 2>/dev/null || true
+            rm -rf wt-output
+          fi
+
+      - name: Deploy to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

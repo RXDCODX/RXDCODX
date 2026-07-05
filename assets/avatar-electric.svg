@@ -101,7 +101,4 @@
 
   <!-- Inner ring -->
   <circle cx="210" cy="210" r="160" fill="none" stroke="#E6AC0C" stroke-width="2" opacity="0.6"/>
-
-  <!-- RXDCODX text at bottom -->
-  <text x="210" y="405" text-anchor="middle" font-family="'Courier New', monospace" font-weight="bold" font-size="14" fill="#E6AC0C" opacity="0.8">RXDCODX</text>
 </svg>
