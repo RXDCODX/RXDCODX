@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- RED CODE RAIN — MATRIX EFFECT -->
-<img src="https://raw.githubusercontent.com/RXDCODX/RXDCODX/output/matrix-rain.gif" width="100%" alt="Red Code Rain — RXDCODX"/>
+<img src="https://raw.githubusercontent.com/RXDCODX/RXDCODX/refs/heads/main/assets/matrix-rain.svg" width="100%" alt="Red Code Rain — RXDCODX"/>
 
 <!-- TYPING HEADER -->
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=RXDCODX;Full+Stack+Developer;Building+the+MARS+ecosystem&font=Fira+Code&center=true&width=500&height=100&duration=3000&pause=2000&color=FF3333&background=0D111700&size=25&vCenter=true)](https://git.io/typing-svg)
