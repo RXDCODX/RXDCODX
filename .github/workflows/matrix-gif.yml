@@ -11,7 +11,7 @@ permissions:
 jobs:
   record:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,31 +21,20 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install Puppeteer
+      - name: Install system deps for canvas
+        run: sudo apt-get update && sudo apt-get install -y build-essential libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev librsvg2-dev ffmpeg
+
+      - name: Install canvas
         run: |
           npm init -y
-          npm install puppeteer
+          npm install canvas
 
-      - name: Install ffmpeg and gifsicle
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg gifsicle
-
-      - name: Capture Matrix frames
+      - name: Render Matrix GIF
         run: node .github/scripts/capture-matrix.js
-
-      - name: Assemble and optimize GIF
-        run: |
-          mkdir -p dist
-          ffmpeg -y -framerate 8 -i .github/frames/frame-%04d.png \
-            -vf "split[s0][s1];[s0]palettegen=max_colors=64:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=3" \
-            -loop 0 dist/matrix-rain.gif
-
-          gifsicle -O3 --lossy=80 -b dist/matrix-rain.gif
-
-          echo "GIF size:"
-          ls -lh dist/matrix-rain.gif
 
       - name: Copy existing output branch content
         run: |
+          mkdir -p dist
           git fetch origin output || true
           if git show-ref --verify --quiet refs/remotes/origin/output; then
             git worktree add wt-output origin/output
