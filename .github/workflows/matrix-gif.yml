@@ -34,6 +34,7 @@ jobs:
 
       - name: Assemble and optimize GIF
         run: |
+          mkdir -p dist
           ffmpeg -y -framerate 8 -i .github/frames/frame-%04d.png \
             -vf "split[s0][s1];[s0]palettegen=max_colors=64:stats_mode=diff[p];[s1][p]paletteuse=dither=bayer:bayer_scale=3" \
             -loop 0 dist/matrix-rain.gif
