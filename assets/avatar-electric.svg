@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420">
+  <defs>
+    <clipPath id="circle">
+      <circle cx="210" cy="210" r="160"/>
+    </clipPath>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-strong">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Animated electric arcs -->
+    <style>
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes rotate-reverse {
+        from { transform: rotate(360deg); }
+        to { transform: rotate(0deg); }
+      }
+      @keyframes dash {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -200; }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; }
+      }
+      .arc1 {
+        animation: rotate 3s linear infinite;
+        transform-origin: 210px 210px;
+      }
+      .arc2 {
+        animation: rotate-reverse 4s linear infinite;
+        transform-origin: 210px 210px;
+      }
+      .arc3 {
+        animation: rotate 5s linear infinite;
+        transform-origin: 210px 210px;
+      }
+      .spark {
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+      .spark:nth-child(2) { animation-delay: 0.3s; }
+      .spark:nth-child(3) { animation-delay: 0.6s; }
+      .spark:nth-child(4) { animation-delay: 0.9s; }
+      .spark:nth-child(5) { animation-delay: 1.2s; }
+    </style>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="420" height="420" rx="20" fill="#0D1117"/>
+
+  <!-- Outer glow ring -->
+  <circle cx="210" cy="210" r="175" fill="none" stroke="#E6AC0C" stroke-width="1" opacity="0.3" filter="url(#glow-strong)"/>
+
+  <!-- Electric arcs - layer 1 -->
+  <g class="arc1" filter="url(#glow)">
+    <circle cx="210" cy="210" r="170" fill="none" stroke="#E6AC0C" stroke-width="3" stroke-dasharray="15 10 40 15 8 25" stroke-linecap="round"/>
+  </g>
+
+  <!-- Electric arcs - layer 2 -->
+  <g class="arc2" filter="url(#glow)">
+    <circle cx="210" cy="210" r="172" fill="none" stroke="#FFD700" stroke-width="2" stroke-dasharray="25 20 10 30 15 15" stroke-linecap="round"/>
+  </g>
+
+  <!-- Electric arcs - layer 3 -->
+  <g class="arc3" filter="url(#glow)">
+    <circle cx="210" cy="210" r="168" fill="none" stroke="#FFF8DC" stroke-width="1.5" stroke-dasharray="5 35 20 25 10 20" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- Spark dots -->
+  <g filter="url(#glow)">
+    <circle class="spark" cx="380" cy="210" r="3" fill="#FFD700"/>
+    <circle class="spark" cx="210" cy="40" r="2.5" fill="#E6AC0C"/>
+    <circle class="spark" cx="50" cy="280" r="2" fill="#FFF8DC"/>
+    <circle class="spark" cx="320" cy="100" r="2.5" fill="#FFD700"/>
+    <circle class="spark" cx="100" cy="350" r="2" fill="#E6AC0C"/>
+  </g>
+
+  <!-- Avatar circle mask background -->
+  <circle cx="210" cy="210" r="162" fill="#161B22"/>
+
+  <!-- Avatar image - replace URL with your avatar -->
+  <image
+    href="https://static-cdn.jtvnw.net/jtv_user_pictures/785975641-profile_image-300x300.png"
+    x="50" y="50" width="320" height="320"
+    clip-path="url(#circle)"
+    preserveAspectRatio="xMidYMid slice"
+  />
+
+  <!-- Inner ring -->
+  <circle cx="210" cy="210" r="160" fill="none" stroke="#E6AC0C" stroke-width="2" opacity="0.6"/>
+
+  <!-- RXDCODX text at bottom -->
+  <text x="210" y="405" text-anchor="middle" font-family="'Courier New', monospace" font-weight="bold" font-size="14" fill="#E6AC0C" opacity="0.8">RXDCODX</text>
+</svg>
