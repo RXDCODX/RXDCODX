@@ -93,7 +93,7 @@
 
   <!-- Avatar image - replace URL with your avatar -->
   <image
-    href="https://static-cdn.jtvnw.net/jtv_user_pictures/785975641-profile_image-300x300.png"
+    href="https://avatars.githubusercontent.com/u/88150316?v=4"
     x="50" y="50" width="320" height="320"
     clip-path="url(#circle)"
     preserveAspectRatio="xMidYMid slice"
