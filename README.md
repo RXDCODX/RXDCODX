@@ -47,7 +47,7 @@ motto: "Red Code — every line matters"
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![SignalR](https://img.shields.io/badge/SignalR-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![gRPC](https://img.shields.io/badge/gRPC-244c5a?style=for-the-badge&logo=grpc&logoColor=white)
-![REST API](https://img.shields.io/badge/REST_API-FF3333?style=for-the-badge&logo=api&logoColor=white)
+![REST API](https://img.shields.io/badge/REST_API-FF3333?style=for-the-badge&logo=api&logoColor=white&color=green)
 ![FluentValidation](https://img.shields.io/badge/FluentValidation-FF3333?style=for-the-badge&logo=sharp&logoColor=white)
 
 #### Data & Messaging
