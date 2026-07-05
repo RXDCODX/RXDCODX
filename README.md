@@ -29,7 +29,6 @@ focus:
 passions:
   - Open Source
   - AI & Machine Learning
-  - Design / UI / UX
   - System Programming
 motto: "Red Code — every line matters"
 ```
