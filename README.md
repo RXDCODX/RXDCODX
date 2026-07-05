@@ -175,6 +175,4 @@ motto: "Red Code — every line matters"
 
 <img src="assets/rxdcodx-ascii.svg" width="600" alt="RXDCODX"/>
 
-**RED CODE** — every line matters
-
 </div>
