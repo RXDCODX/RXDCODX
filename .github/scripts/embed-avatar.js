@@ -4,8 +4,8 @@ const https = require("https");
 
 const AVATAR_URL =
   "https://avatars.githubusercontent.com/u/88150316?v=4&s=400";
-const SVG_TEMPLATE = path.join(__dirname, "..", "assets", "avatar-electric.svg");
-const DIST_DIR = path.join(__dirname, "..", "dist");
+const SVG_TEMPLATE = path.join(__dirname, "..", "..", "assets", "avatar-electric.svg");
+const DIST_DIR = path.join(__dirname, "..", "..", "dist");
 
 function download(url) {
   return new Promise((resolve, reject) => {
