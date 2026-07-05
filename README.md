@@ -132,8 +132,26 @@ motto: "Red Code — every line matters"
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=RXDCODX&show_icons=true&theme=radical&bg_color=0D1117&title_color=FF3333&icon_color=FF3333&text_color=C9D1D9&border_color=30363D&hide_border=false" width="49%" alt="GitHub Stats"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=RXDCODX&layout=compact&theme=radical&bg_color=0D1117&title_color=FF3333&text_color=C9D1D9&border_color=30363D&hide_border=false" width="49%" alt="Top Languages"/>
+#### Profile Summary
+
+<a href="https://github.com/RXDCODX">
+  <img src="profile-summary-card-output/radical/0-profile-details.svg" width="100%" alt="Profile Details"/>
+</a>
+
+<table>
+<tr>
+<td><img src="profile-summary-card-output/radical/1-repos-per-language.svg" width="100%" alt="Repos per Language"/></td>
+<td><img src="profile-summary-card-output/radical/3-stats.svg" width="100%" alt="Stats"/></td>
+</tr>
+<tr>
+<td><img src="profile-summary-card-output/radical/2-most-commit-language.svg" width="100%" alt="Most Commit Language"/></td>
+<td><img src="profile-summary-card-output/radical/4-productive-time.svg" width="100%" alt="Productive Time"/></td>
+</tr>
+</table>
+
+#### Metrics
+
+<img src="https://raw.githubusercontent.com/RXDCODX/RXDCODX/output/metrics.classic.svg" width="100%" alt="Metrics"/>
 
 </div>
 
