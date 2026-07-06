@@ -140,17 +140,17 @@ motto: "Red Code — every line matters"
 #### <span style="color:#E53228">Profile Summary</span>
 
 <a href="https://github.com/RXDCODX">
-  <img src="profile-summary-card-output/radical/0-profile-details.svg" width="100%" alt="Profile Details"/>
+  <img src="profile-summary-card-output/codeSTACKr/0-profile-details.svg" width="100%" alt="Profile Details"/>
 </a>
 
 <table>
 <tr>
-<td><img src="profile-summary-card-output/radical/1-repos-per-language.svg" width="100%" alt="Repos per Language"/></td>
-<td><img src="profile-summary-card-output/radical/3-stats.svg" width="100%" alt="Stats"/></td>
+<td><img src="profile-summary-card-output/codeSTACKr/1-repos-per-language.svg" width="100%" alt="Repos per Language"/></td>
+<td><img src="profile-summary-card-output/codeSTACKr/3-stats.svg" width="100%" alt="Stats"/></td>
 </tr>
 <tr>
-<td><img src="profile-summary-card-output/radical/2-most-commit-language.svg" width="100%" alt="Most Commit Language"/></td>
-<td><img src="profile-summary-card-output/radical/4-productive-time.svg" width="100%" alt="Productive Time"/></td>
+<td><img src="profile-summary-card-output/codeSTACKr/2-most-commit-language.svg" width="100%" alt="Most Commit Language"/></td>
+<td><img src="profile-summary-card-output/codeSTACKr/4-productive-time.svg" width="100%" alt="Productive Time"/></td>
 </tr>
 </table>
 
