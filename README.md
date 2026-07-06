@@ -18,6 +18,8 @@
 
 ### `>` [whoami](color: red)
 
+[whoami](color: red)
+
 ```yaml
 name: RXDCODX
 role: Full Stack Developer
