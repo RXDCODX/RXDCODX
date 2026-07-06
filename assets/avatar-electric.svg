@@ -62,30 +62,30 @@
   <rect width="420" height="420" rx="20" fill="#0D1117"/>
 
   <!-- Outer glow ring -->
-  <circle cx="210" cy="210" r="175" fill="none" stroke="#E6AC0C" stroke-width="1" opacity="0.3" filter="url(#glow-strong)"/>
+  <circle cx="210" cy="210" r="175" fill="none" stroke="#E53228" stroke-width="1" opacity="0.3" filter="url(#glow-strong)"/>
 
   <!-- Electric arcs - layer 1 -->
   <g class="arc1" filter="url(#glow)">
-    <circle cx="210" cy="210" r="170" fill="none" stroke="#E6AC0C" stroke-width="3" stroke-dasharray="15 10 40 15 8 25" stroke-linecap="round"/>
+    <circle cx="210" cy="210" r="170" fill="none" stroke="#E53228" stroke-width="3" stroke-dasharray="15 10 40 15 8 25" stroke-linecap="round"/>
   </g>
 
   <!-- Electric arcs - layer 2 -->
   <g class="arc2" filter="url(#glow)">
-    <circle cx="210" cy="210" r="172" fill="none" stroke="#FFD700" stroke-width="2" stroke-dasharray="25 20 10 30 15 15" stroke-linecap="round"/>
+    <circle cx="210" cy="210" r="172" fill="none" stroke="#fb7252" stroke-width="2" stroke-dasharray="25 20 10 30 15 15" stroke-linecap="round"/>
   </g>
 
   <!-- Electric arcs - layer 3 -->
   <g class="arc3" filter="url(#glow)">
-    <circle cx="210" cy="210" r="168" fill="none" stroke="#FFF8DC" stroke-width="1.5" stroke-dasharray="5 35 20 25 10 20" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="210" cy="210" r="168" fill="none" stroke="#fcaf93" stroke-width="1.5" stroke-dasharray="5 35 20 25 10 20" stroke-linecap="round" opacity="0.7"/>
   </g>
 
   <!-- Spark dots -->
   <g filter="url(#glow)">
-    <circle class="spark" cx="380" cy="210" r="3" fill="#FFD700"/>
-    <circle class="spark" cx="210" cy="40" r="2.5" fill="#E6AC0C"/>
-    <circle class="spark" cx="50" cy="280" r="2" fill="#FFF8DC"/>
-    <circle class="spark" cx="320" cy="100" r="2.5" fill="#FFD700"/>
-    <circle class="spark" cx="100" cy="350" r="2" fill="#E6AC0C"/>
+    <circle class="spark" cx="380" cy="210" r="3" fill="#fb7252"/>
+    <circle class="spark" cx="210" cy="40" r="2.5" fill="#E53228"/>
+    <circle class="spark" cx="50" cy="280" r="2" fill="#fcaf93"/>
+    <circle class="spark" cx="320" cy="100" r="2.5" fill="#fb7252"/>
+    <circle class="spark" cx="100" cy="350" r="2" fill="#E53228"/>
   </g>
 
   <!-- Avatar circle mask background -->
@@ -100,5 +100,5 @@
   />
 
   <!-- Inner ring -->
-  <circle cx="210" cy="210" r="160" fill="none" stroke="#E6AC0C" stroke-width="2" opacity="0.6"/>
+  <circle cx="210" cy="210" r="160" fill="none" stroke="#E53228" stroke-width="2" opacity="0.6"/>
 </svg>

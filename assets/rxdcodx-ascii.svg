@@ -7,7 +7,7 @@
   </defs>
   <rect width="600" height="90" rx="8" fill="#0D1117"/>
   <g filter="url(#glow)">
-    <text x="300" y="42" text-anchor="middle" font-family="'Courier New', monospace" font-weight="bold" font-size="36" fill="#FF3333" letter-spacing="12">RXDCODX</text>
-    <text x="300" y="68" text-anchor="middle" font-family="'Courier New', monospace" font-size="14" fill="#FF3333" opacity="0.6">RED CODE — every line matters</text>
+    <text x="300" y="42" text-anchor="middle" font-family="'Courier New', monospace" font-weight="bold" font-size="36" fill="#E53228" letter-spacing="12">RXDCODX</text>
+    <text x="300" y="68" text-anchor="middle" font-family="'Courier New', monospace" font-size="14" fill="#E53228" opacity="0.6">RED CODE — every line matters</text>
   </g>
 </svg>
