@@ -18,7 +18,10 @@
 
 ### `>` [whoami](color: red)
 
-[whoami](color: red)
+<p>
+Quack quack
+<text color=red>ERROR</text>
+</p>
 
 ```yaml
 name: RXDCODX
