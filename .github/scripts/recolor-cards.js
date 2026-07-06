@@ -3,40 +3,43 @@ const path = require("path");
 
 const INPUT_DIR = path.join(__dirname, "..", "..", "profile-summary-card-output");
 const OUTPUT_DIR = path.join(__dirname, "..", "..", "dist", "cards");
-const THEME = "radical"; // base theme to recolor
 
 const REPLACEMENTS = [
-  // Backgrounds
-  ["#282a36", "#0D1117"], // dracula bg
-  ["#24292e", "#0D1117"], // github dark bg
-  ["#0d1117", "#0D1117"], // github dark bg (lowercase)
-  ["#1a1b27", "#0D1117"], // tokyonight bg
-  ["#2d333b", "#0D1117"], // github_dark bg
+  // Backgrounds → transparent
+  ["#3f3f3f", "none"],
+  ["#282a36", "none"],
+  ["#24292e", "none"],
+  ["#0d1117", "none"],
+  ["#1a1b27", "none"],
+  ["#2d333b", "none"],
+  ["#161b22", "none"],
+  ["#22272e", "none"],
 
-  // Accent/title colors → our red
-  ["#ff79c6", "#E53228"], // dracula pink
-  ["#f97583", "#E53228"], // github accent
-  ["#e53228", "#E53228"], // radical red (already correct)
-  ["#ff6b6b", "#E53228"], // some theme red
+  // Title/accent → red
+  ["#f0dfaf", "#E53228"],
+  ["#ff79c6", "#E53228"],
+  ["#f97583", "#E53228"],
+  ["#ff6b6b", "#E53228"],
+  ["#58a6ff", "#E53228"],
+  ["#79c0ff", "#fb7252"],
 
-  // Text colors
-  ["#f8f8f2", "#C9D1D9"], // dracula text → github light
-  ["#c9d1d9", "#C9D1D9"], // github text (already correct)
+  // Icons → red
+  ["#8cd0d3", "#E53228"],
+  ["#6272a4", "#8B949E"],
+  ["#7f9f7f", "#E53228"],
 
-  // Secondary text / muted
-  ["#6272a4", "#8B949E"], // dracula comment → github muted
-  ["#8b949e", "#8B949E"], // github muted (already correct)
+  // Text → GitHub light
+  ["#dcdccc", "#C9D1D9"],
+  ["#f8f8f2", "#C9D1D9"],
+  ["#abb2bf", "#C9D1D9"],
+  ["#bfc5d3", "#C9D1D9"],
+
+  // Stats
+  ["#f0883e", "#E53228"],
 
   // Borders
-  ["#444c56", "#30363D"], // github border
-  ["#30363d", "#30363D"], // github border (lowercase)
-
-  // Icon fills
-  ["#58a6ff", "#E53228"], // github blue link → red
-  ["#79c0ff", "#fb7252"], // github light blue → light red
-
-  // Stats numbers
-  ["#f0883e", "#E53228"], // github orange → red
+  ["#444c56", "#30363D"],
+  ["#30363d", "#30363D"],
 ];
 
 function recolorSvg(svg) {
