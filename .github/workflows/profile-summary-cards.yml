@@ -14,12 +14,41 @@ jobs:
     name: generate-github-profile-summary-cards
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
+
       - uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
-          GITHUB_TOKEN: ${{ secrets.DABORY_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
         with:
           USERNAME: RXDCODX
           BRANCH_NAME: "main"
           UTC_OFFSET: 3
           EXCLUDE: ""
-          AUTO_PUSH: true
+          AUTO_PUSH: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Recolor cards
+        run: node .github/scripts/recolor-cards.js
+
+      - name: Deploy recolored cards to output branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin output || true
+          if git show-ref --verify --quiet refs/remotes/origin/output; then
+            git checkout output
+          else
+            git checkout --orphan output
+            git rm -rf . 2>/dev/null || true
+          fi
+          mkdir -p cards
+          cp dist/cards/*.svg cards/
+          git add -A
+          git diff --cached --quiet || git commit -m "update summary cards [skip ci]"
+          git push origin output

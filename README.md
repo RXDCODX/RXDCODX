@@ -139,17 +139,17 @@ motto: "Red Code — every line matters"
 #### <img src="assets/headers/h-profile-summary.svg" height="22" alt="Profile Summary"/>
 
 <a href="https://github.com/RXDCODX">
-  <img src="profile-summary-card-output/codeSTACKr/0-profile-details.svg" width="100%" alt="Profile Details"/>
+  <img src="https://raw.githubusercontent.com/RXDCODX/RXDCODX/output/cards/0-profile-details.svg" width="100%" alt="Profile Details"/>
 </a>
 
 <table>
 <tr>
-<td><img src="profile-summary-card-output/codeSTACKr/1-repos-per-language.svg" width="100%" alt="Repos per Language"/></td>
-<td><img src="profile-summary-card-output/codeSTACKr/3-stats.svg" width="100%" alt="Stats"/></td>
+<td><img src="https://raw.githubusercontent.com/RXDCODX/RXDCODX/output/cards/1-repos-per-language.svg" width="100%" alt="Repos per Language"/></td>
+<td><img src="https://raw.githubusercontent.com/RXDCODX/RXDCODX/output/cards/3-stats.svg" width="100%" alt="Stats"/></td>
 </tr>
 <tr>
-<td><img src="profile-summary-card-output/codeSTACKr/2-most-commit-language.svg" width="100%" alt="Most Commit Language"/></td>
-<td><img src="profile-summary-card-output/codeSTACKr/4-productive-time.svg" width="100%" alt="Productive Time"/></td>
+<td><img src="https://raw.githubusercontent.com/RXDCODX/RXDCODX/output/cards/2-most-commit-language.svg" width="100%" alt="Most Commit Language"/></td>
+<td><img src="https://raw.githubusercontent.com/RXDCODX/RXDCODX/output/cards/4-productive-time.svg" width="100%" alt="Productive Time"/></td>
 </tr>
 </table>
 
