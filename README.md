@@ -1,5 +1,8 @@
 <div align="center">
 
+<!-- DIVIDER -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:E53228,100:0D1117&height=120&section=header&text=&fontSize=0&animation=fadeIn" width="100%"/>
+
 <!-- RED CODE RAIN — MATRIX EFFECT -->
 <img src="https://raw.githubusercontent.com/RXDCODX/RXDCODX/refs/heads/main/assets/matrix-rain.svg" width="100%" alt="Red Code Rain — RXDCODX"/>
 
@@ -8,9 +11,6 @@
 
 <!-- AVATAR WITH ELECTRIC BORDER -->
 <img src="https://raw.githubusercontent.com/RXDCODX/RXDCODX/output/avatar-electric.svg" width="300" alt="RXDCODX Avatar"/>
-
-<!-- DIVIDER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,50:E53228,100:0D1117&height=120&section=header&text=&fontSize=0&animation=fadeIn" width="100%"/>
 
 </div>
 
