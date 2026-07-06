@@ -16,7 +16,7 @@
 
 ---
 
-### `>` whoami
+### `>` #E53228[whoami]
 
 ```yaml
 name: RXDCODX
@@ -35,11 +35,11 @@ motto: "Red Code — every line matters"
 
 ---
 
-### <span style="color:#E53228">`>` tech stack</span>
+### `>` #E53228[tech stack]
 
 <div align="center">
 
-#### <span style="color:#E53228">Backend</span>
+#### #E53228[Backend]
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET_10-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
