@@ -34,12 +34,15 @@ jobs:
           node-version: "20"
 
       - name: Recolor cards
-        run: node .github/scripts/recolor-cards.js
+        run: |
+          node .github/scripts/recolor-cards.js
+          cp -r dist/cards /tmp/cards
 
       - name: Deploy recolored cards to output branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git stash --include-untracked || true
           git fetch origin output || true
           if git show-ref --verify --quiet refs/remotes/origin/output; then
             git checkout output
@@ -48,7 +51,7 @@ jobs:
             git rm -rf . 2>/dev/null || true
           fi
           mkdir -p cards
-          cp dist/cards/*.svg cards/
+          cp /tmp/cards/*.svg cards/
           git add -A
           git diff --cached --quiet || git commit -m "update summary cards [skip ci]"
           git push origin output
