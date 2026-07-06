@@ -35,7 +35,7 @@ motto: "Red Code — every line matters"
 
 ---
 
-### `>` #E53228[tech stack]
+### `>` #e53228[tech stack]
 
 <div align="center">
 
