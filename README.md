@@ -16,7 +16,7 @@
 
 ---
 
-### `>` #E53228[whoami]
+### `>` [whoami](color: red)
 
 ```yaml
 name: RXDCODX
@@ -35,7 +35,7 @@ motto: "Red Code — every line matters"
 
 ---
 
-### `>` ![#e53228](tech stack)
+### `>` #e53228(tech stack)
 
 <div align="center">
 
