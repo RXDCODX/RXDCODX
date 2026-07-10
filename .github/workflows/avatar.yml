@@ -31,6 +31,7 @@ jobs:
           cp dist/avatar-electric.svg /tmp/avatar-electric.svg
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git stash --include-untracked || true
           git fetch origin output || true
           if git show-ref --verify --quiet refs/remotes/origin/output; then
             git checkout output

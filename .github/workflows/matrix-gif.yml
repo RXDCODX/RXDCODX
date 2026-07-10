@@ -36,8 +36,10 @@ jobs:
 
       - name: Deploy to output branch
         run: |
+          cp dist/matrix-rain.gif /tmp/
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git stash --include-untracked || true
           git fetch origin output || true
           if git show-ref --verify --quiet refs/remotes/origin/output; then
             git checkout output
@@ -45,7 +47,7 @@ jobs:
             git checkout --orphan output
             git rm -rf . 2>/dev/null || true
           fi
-          cp dist/matrix-rain.gif ./
+          cp /tmp/matrix-rain.gif ./
           git add -A
           git diff --cached --quiet || git commit -m "update matrix [skip ci]"
           git push origin output
