@@ -95,6 +95,7 @@ motto: "Red Code — every line matters"
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 ![DBeaver](https://img.shields.io/badge/dbeaver-382923?style=for-the-badge&logo=dbeaver&logoColor=white)
+![CSharpier](https://shields.io/badge/CSharpier-32566c?style=for-the-badge&logoColor=white)
 
 #### <img src="assets/headers/h-integrations.svg" height="22" alt="Integrations"/>
 ![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)
